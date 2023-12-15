@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
-const Schema = mongoose.Schema;
+//const Schema = mongoose.Schema;
 
 const destinationSchema = new mongoose.Schema({
-    airport: {
+    dairport: {
         type: String,
         enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN'],
     },
