@@ -13,8 +13,8 @@ async function index(req, res) {
 }
 
 async function show(req, res) {
-    const flights = await FlightfindById(req.params.id);
-    res.render('flights/show', { title: 'Flight Detail', flights });  
+    const flight = await Flight.findById(req.params.id);
+    res.render('flights/show', { title: 'Flight Detail', flight });  
 }
 
 function newFlight(req, res) {
