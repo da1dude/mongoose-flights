@@ -36,6 +36,6 @@ async function create(req, res) {
     } catch (err) {
       // Typically some sort of validation error
         console.log(err);
-        res.render('flights/new', { errorMsg: err.message });
+        res.render('flights/new', { title: 'New Flights', errorMsg: err.message });
     }
 }
