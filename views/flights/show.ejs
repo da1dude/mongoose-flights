@@ -10,6 +10,11 @@
     <div>Departs: </div>
     <div><%= flight.departs %></div>
 </section>
+
+<form action="/flights/<%= flight._id %>/tickets/new" method="POST">
+    <button type="submit" value="Add Tickets"></button>
+</form>
+
 <br><br><h2>Destination</h2>
 <form id="add-arrival-form" method="POST"
   action="/flights/<%= flight._id %>/arrivals">
@@ -50,8 +55,7 @@
       </tbody>
     </table>
   <% } else { %>
-    <h5>No Reviews Yet</h5>
+    <h5>No Destinations</h5>
   <% } %>
-
 
 <%- include('../partials/footer') %>

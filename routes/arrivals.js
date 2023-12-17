@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const reviewsCtrl = require('../controllers/arrivals');
+const arrivalsCtrl = require('../controllers/arrivals');
 
 // POST /flights/:id/arrivals 
-router.post('/flights/:id/arrivals', reviewsCtrl.create);
+router.post('/flights/:id/arrivals', arrivalsCtrl.create);
 
 module.exports = router;

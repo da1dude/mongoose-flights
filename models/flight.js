@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
-//const Schema = mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const destinationSchema = new mongoose.Schema({
     dairport: {
@@ -31,7 +31,12 @@ const flightSchema = new mongoose.Schema({
     departs: {
         type: Date
     },
-    destinations: [destinationSchema]
+    destinations: [destinationSchema],
+    seat: [{
+        type: Schema.Types.ObjectId,
+        ref: 'Ticket'
+    }]
+
 })
 
 
