@@ -10,16 +10,16 @@
 <body>
     <main>
     <h2>Enter a New Ticket</h2>
-        <form id="new-form" action="/flights" method="/flights/:id/tickets/new" method="POST"">
+        <form id="new-form" action="/flights/<%= flight._id %>/tickets" method="POST">
             <label>Seat:
                 <input type="text" name='seat'>
             </label><br>
             <label>Price:
                 <input type="text" name='price'>
             </label><br>
-            <label>Flight No:
-                <input type="text" name='flight'>
-            </label><br>
+            <!-- <label>Flight No:
+                <input type="text" name='flight'> -->
+            <!-- </label><br> -->
             <button type="submit">Add Ticket</button>
         </form>
     </main>

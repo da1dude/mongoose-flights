@@ -29,14 +29,13 @@ const flightSchema = new mongoose.Schema({
         max: 9999
     },
     departs: {
-        type: Date
+    type: Date,
+    default: function() {
+        let date = new Date();
+        date.setFullYear(date.getFullYear() + 1);
+        return date;}
     },
-    destinations: [destinationSchema],
-    seat: [{
-        type: Schema.Types.ObjectId,
-        ref: 'Ticket'
-    }]
-
+    destinations: [destinationSchema]
 })
 
 

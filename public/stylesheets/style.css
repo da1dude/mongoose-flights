@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #424748;
+  color: #373d3e;
 }
 
 body {
@@ -16,17 +16,11 @@ body {
 
 body > nav {
   grid-area: nav;
-  background-color: #B8C0C2;
+  background-color: #2699b6;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
-}
-
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
 }
 
 body > main {
@@ -34,13 +28,9 @@ body > main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #E8ECEB;
+  background-color: #ceeded;
   padding: 20px;
   overflow-y: scroll;
-}
-
-body > main h1:first-child {
-  margin-bottom: 50px;
 }
 
 nav > a {
@@ -62,15 +52,13 @@ nav > a.active {
 
 #new-form {
   display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
 #new-form *,
 #add-arrival-form *,
-#add-performer-form * {
-  font-size: 20px;
-  padding: 5px;
+#add-ticket-form * {
+  font-size: 18px;
+  padding: 1px;
   border-radius: 5px;
 }
 
@@ -94,10 +82,6 @@ table td {
   text-align: center;
 }
 
-#list td:nth-child(2), #list td:nth-child(3){
-  min-width: 100px;
-}
-
 #list a {
   border-radius: 4px;
   background-color: #B8C0C2;
@@ -114,56 +98,19 @@ table td {
   display: grid;
   grid-template-columns: auto auto;
   grid-gap: 1rem;
-}
-
-#show-page div:nth-child(even) {
   font-weight: bold;
 }
 
-/* #add-arrival-form, */
-#add-performer-form {
+
+#add-arrival-form
+#add-ticket-form {
   display: grid;
   align-self: auto;
   grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
 }
 
 #add-arrival-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-ticket-form input[type="submit"]  {
   width: 10rem;
   grid-column: 2 / 3;
-}
-
-hr {
-  color: #424748
-}
-
-#badge-container {
-  display: flex;
-  flex-wrap: wrap;
-  /* padding: 1rem; */
-  width: 80%;
-  border: 2px solid #B8C0C2;
-  border-radius: .5rem;
-  margin: .5rem 0 2rem;
-}
-
-.badge {
-  background-color: #B8C0C2;
-  padding: .5rem;
-  margin: .5rem;
-  border-radius: .3rem;
-  font-size: .8rem;
-  text-align: center;
-}
-
-#show-page ul {
-  margin: 0 0 2rem;
-  padding: 0;
-  list-style: none;
-}
-  
-#show-page li {
-  font-weight: bold;
 }
